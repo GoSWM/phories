@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            padding-top: 80px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+	    <h1>Phories <small>Profiles</small></h1><br><br><br>
+
+        <h2>
+<%=user.twitter.displayName %>
+        </h2>
+<p class="lead">@<%=user.twitter.username %></p><br>
+
+<hr>
+        <a href="/unlink/twitter" class="btn btn-danger">Delete Account</a>
+        <a href="/logout" class="btn btn-default">Logout</a>
+       <hr>
+        <div class="debug">
+          <h3>Debug</h3>
+          <strong>id</strong>:<%=user.twitter.id %><br>
+          <strong>token</strong>: <%=user.twitter.token %><br>
+        </div>
+
+    </div>
+</body>
+
+</html>
